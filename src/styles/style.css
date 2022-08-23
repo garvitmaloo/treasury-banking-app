@@ -1,0 +1,347 @@
+/* Variable */
+:root {
+  --font-heading: "EB Garamond", serif;
+  --font-text: "Source Sans Pro", sans-serif;
+
+  --color-primary: #801cb5;
+  --color-secondary: #c32195;
+  --color-tertiary: #ff735c;
+
+  --color-black-95: rgba(0, 0, 0, 0.95);
+  --color-black-75: rgba(0, 0, 0, 0.75);
+  --color-black-50: rgba(0, 0, 0, 0.5);
+  --color-black-25: rgba(0, 0, 0, 0.25);
+  --color-black-5: rgba(0, 0, 0, 0.05);
+
+  --color-white: white;
+
+  --slow-transition: all 350ms ease-in-out;
+  --quick-transition: all 200ms ease-in-out;
+  --box-shadow: 0 2px 7px 1px rgb(175, 175, 175);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+body p,
+button,
+a,
+span {
+  font-family: var(--font-text);
+}
+
+.hidden {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* Header */
+header {
+  width: 100%;
+  text-align: center;
+}
+
+nav img {
+  height: 50px;
+  width: 50px;
+}
+
+main {
+  position: relative;
+}
+
+.section {
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#hero .image-wrapper img {
+  width: 720px;
+  height: 480px;
+}
+
+#hero .text-wrapper {
+  max-width: 480px;
+  padding: 4rem 2rem;
+  align-self: center;
+}
+
+.hero-heading {
+  font-size: 4rem;
+  margin: 3rem 0;
+  color: var(--color-black-95);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hero-text {
+  font-size: 2rem;
+}
+
+.button-wrapper {
+  margin: 3rem 0;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+/* Login Form */
+
+.form-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--color-black-50);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-wrapper.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background-color: var(--color-white);
+  z-index: -1;
+  padding: 3rem;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-wrapper.show .form {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+  transition: var(--slow-transition);
+  z-index: 1000;
+}
+
+.form i {
+  float: right;
+  font-size: 2.5rem;
+  margin: 5px;
+  color: var(--color-black-50);
+  cursor: pointer;
+}
+
+.form input {
+  display: block;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 2px solid var(--color-black-25);
+  transition: var(--quick-transition);
+  font-size: 2rem;
+  margin: 2rem 0;
+  font-family: var(--font-text);
+}
+
+.form input::placeholder {
+  color: var(--color-black-25);
+}
+
+.form input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.login-error {
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: rgba(255, 191, 191, 0.6);
+  color: rgb(255, 79, 79);
+  font-size: 1.6rem;
+  max-width: 230px;
+  border-radius: 5px;
+}
+
+.login-error i {
+  float: none;
+  color: rgb(255, 79, 79);
+  margin: 0 5px;
+  font-size: 1.6rem;
+}
+
+/* User Interface */
+.UI {
+  display: flex;
+  justify-content: space-evenly;
+}
+.UI .image-wrapper img {
+  width: 400px;
+}
+
+.UI .text-wrapper {
+  align-self: center;
+}
+
+.UI .btn {
+  background-color: var(--color-tertiary);
+}
+
+.UI .btn i {
+  margin-right: 1rem;
+}
+
+/* View Transactions */
+.section.transactions {
+  display: block;
+}
+
+.transactions .section-heading {
+  font-size: 3.2rem;
+  text-align: center;
+  position: relative;
+}
+
+.transactions .section-heading::before {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 5rem;
+  background-color: var(--color-secondary);
+}
+
+.transactions-wrapper {
+  max-width: 600px;
+  background-color: var(--color-black-5);
+  border-radius: 5px;
+  margin: 4rem auto;
+  padding: 32px;
+}
+
+.trans {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: 0 5px 5px 0;
+  margin: 1rem auto;
+}
+
+.trans.add {
+  border-left: 4px solid gold;
+}
+
+.trans.receive {
+  border-left: 4px solid green;
+}
+
+.trans.transfer {
+  border-left: 4px solid orangered;
+}
+
+.trans .heading {
+  font-size: 2.4rem;
+}
+
+.trans .to-or-from {
+  font-size: 1.6rem;
+  color: var(--color-black-75);
+  display: block;
+  margin: 5px 0;
+}
+
+.trans .date {
+  font-size: 1.6rem;
+  color: var(--color-black-75);
+}
+
+.balance {
+  font-size: 1.6rem;
+  padding: 20px 0;
+  text-align: center;
+  font-family: var(--font-text);
+}
+
+/* Styling Operations form elements */
+#transfer-money-form input {
+  width: 100%;
+}
+
+.add-money-input:focus,
+#transfer-money-form input:focus {
+  border-bottom: 2px solid var(--color-tertiary) !important;
+}
+
+.add-money-btn,
+.transfer-money-btn {
+  background-color: var(--color-tertiary);
+}
+
+#transfer-money-form .form {
+  width: 350px !important;
+}
+
+/* Styles for successful modal */
+.successful-modal {
+  position: absolute;
+  top: -1.5rem;
+  right: 2%;
+  z-index: 2000;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 0px var(--color-black-25);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: white;
+
+  transition: var(--slow-transition);
+}
+
+.successful-modal.show {
+  top: 0;
+  opacity: 1;
+}
+
+.modal-heading {
+  font-size: 2.4rem;
+}
+
+.successful-modal img {
+  height: 30px;
+  width: 30px;
+}

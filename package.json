@@ -1,0 +1,14 @@
+{
+  "name": "treasury",
+  "version": "1.0.0",
+  "description": "banking-app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.html"
+  },
+  "author": "garvit-jain",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}

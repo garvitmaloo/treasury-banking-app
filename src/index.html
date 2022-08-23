@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treasury | Home</title>
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#"><img src="images/logo.png" alt="Logo" /></a>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="section" id="hero">
+        <div class="image-wrapper">
+          <img src="images/home-banner.png" alt="Hero Image" />
+        </div>
+        <div class="text-wrapper">
+          <h1 class="hero-heading">One app for all your banking needs</h1>
+          <p class="hero-text">
+            Make your day-to-day life transactions secure, smooth and fast.
+          </p>
+
+          <div class="button-wrapper">
+            <button class="btn login-btn">Log In</button>
+            <button class="btn">Create an Account</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Login Form Modal -->
+      <div class="form-wrapper">
+        <form action="#" class="form" id="form-modal">
+          <i class="fa-solid fa-xmark"></i>
+
+          <div class="form-fields">
+            <input
+              class="username"
+              name="username"
+              type="text"
+              placeholder="Username"
+              required
+            />
+            <input
+              class="pin"
+              name="pin"
+              type="password"
+              placeholder="PIN"
+              required
+            />
+
+            <br />
+
+            <button
+              class="btn"
+              style="display: block; margin: 2rem auto"
+              type="submit"
+            >
+              Log In
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Add Money Form Modal -->
+      <div class="form-wrapper" id="add-money-form">
+        <form action="#" class="form" id="add-money-form">
+          <i class="fa-solid fa-xmark"></i>
+
+          <div class="form-fields">
+            <input
+              class="add-money-input"
+              name="add-money"
+              type="text"
+              placeholder="Enter Amount"
+              required
+            />
+
+            <br />
+
+            <button
+              class="btn add-money-btn"
+              style="display: block; margin: 2rem auto"
+              type="submit"
+            >
+              Add Money
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Transfer Money Form Modal -->
+      <div class="form-wrapper" id="transfer-money-form">
+        <form action="#" class="form">
+          <i class="fa-solid fa-xmark"></i>
+
+          <div class="form-fields">
+            <input
+              class="transfer-money-to"
+              name="transfer-money-to"
+              type="text"
+              placeholder="Enter Recipient Username"
+              required
+            />
+
+            <input
+              class="transfer-money-to-acc"
+              name="transfer-money-to-acc"
+              type="text"
+              placeholder="Enter Recipient Account Number"
+              required
+            />
+
+            <input
+              class="transfer-money-input"
+              name="transfer-money"
+              type="text"
+              placeholder="Enter Amount"
+              required
+            />
+
+            <br />
+
+            <button
+              class="btn transfer-money-btn"
+              style="display: block; margin: 2rem auto"
+              type="submit"
+            >
+              Transfer Money
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/e8be5a49bb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
