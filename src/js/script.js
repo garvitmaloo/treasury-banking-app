@@ -345,12 +345,12 @@ loginFormBtn.addEventListener("click", function (e) {
     const userInterface = `
     <div class="successful-modal">
         <h1 class="modal-heading">Transaction Successfull</h1>
-        <img src="images/done.jpg" alt="Done Logo" />
+        <img src="./images/done.jpg" alt="Done Logo" />
     </div>
 
     <section class="UI section" id="UI">
         <div class="image-wrapper">
-          <img src="images/user-banner.png" alt="User Image" />
+          <img src="./images/user-banner.png" alt="User Image" />
         </div>
 
         <div class="text-wrapper">
