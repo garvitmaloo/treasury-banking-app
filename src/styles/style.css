@@ -112,6 +112,17 @@ main {
   margin: 0 1rem;
 }
 
+p.instructions {
+  font-size: 14px;
+  background-color: #801cb560;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+p.instructions a {
+  color: black;
+}
+
 /* Login Form */
 
 .form-wrapper {
