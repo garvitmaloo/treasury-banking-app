@@ -321,6 +321,9 @@ closeFormBtn.addEventListener("click", () => {
 loginFormBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
+  let userBannerImg = document.querySelector(".user-banner-img");
+  let donoLogo = document.querySelector(".done-logo-img");
+
   let enteredUsername = usernameInput.value;
   let enteredPIN = pinInput.value;
 
@@ -346,12 +349,12 @@ loginFormBtn.addEventListener("click", function (e) {
     const userInterface = `
     <div class="successful-modal">
         <h1 class="modal-heading">Transaction Successfull</h1>
-        <img src="images/done.jpg" alt="Done Logo" />
+        <img src="${donoLogo.attributes.src.value}" alt="Done Logo" />
     </div>
 
     <section class="UI section" id="UI">
         <div class="image-wrapper">
-          <img src="images/user-banner.png" alt="User Image" />
+          <img src="${userBannerImg.attributes.src.value}" alt="User Image" />
         </div>
 
         <div class="text-wrapper">
