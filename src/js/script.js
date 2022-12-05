@@ -19,8 +19,9 @@ const mainContainer = document.querySelector("main"),
   transferButton = document.querySelector(".transfer-money-btn");
 
 let loginErrorDisplay = false;
-let signedInUser, userIndex;
-let UISection,
+let signedInUser,
+  userIndex,
+  UISection,
   transactionsWrapper,
   transactionCard,
   transactionsSection,
